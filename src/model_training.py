@@ -1,5 +1,5 @@
 """
-模型训练模块 (创新点5)
+模型训练模块
 - 多模型支持: 逻辑回归、随机森林、SVM、朴素贝叶斯
 - GridSearchCV / RandomizedSearchCV 超参数调优
 - 模型保存与加载
@@ -52,6 +52,7 @@ def _get_model_class(model_key):
 def _build_model(model_key, params=None):
     """Build a model instance with default + custom params."""
     info = MODEL_REGISTRY[model_key]
+    # Merge default params with tuning overrides
     merged = {**info["default_params"]}
     if params:
         merged.update(params)
@@ -68,6 +69,7 @@ def split_data(df, target_col=None, test_size=None):
     X = df[feature_cols]
     y = df[target_col]
 
+    # Stratified split preserves class imbalance ratio in both sets
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, random_state=config.RANDOM_STATE, stratify=y
     )
