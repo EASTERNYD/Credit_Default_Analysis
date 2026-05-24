@@ -29,7 +29,6 @@ credit_default_analysis/
 ├── data/
 │   ├── raw/                    # 原始数据 cs-training.csv
 │   └── processed/              # 预处理输出 cleaned_data.csv
-├── notebooks/                  # Jupyter notebook（可选）
 ├── src/
 │   ├── eda.py                  # 数据探索与预览
 │   ├── data_preprocessing.py   # 缺失值补齐 + 异常值处理 + 标准化
