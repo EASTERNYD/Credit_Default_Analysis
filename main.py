@@ -3,12 +3,12 @@
 信用卡违约分析实验系统 — 主执行脚本
 ======================================
 按照 config.py 中的配置运行全部流程:
-  1. 数据加载与预览 (创新点1)
-  2. 数据预处理 (创新点2)
-  3. 特征工程与选择 (创新点3+4)
-  4. 多模型训练 (创新点5)
-  5. 模型评估 (创新点6)
-  6. 数据可视化 (创新点7)
+  1. 数据加载与预览 
+  2. 数据预处理 
+  3. 特征工程与选择 
+  4. 多模型训练 
+  5. 模型评估 
+  6. 数据可视化 
 
 Usage:
     python main.py                    # 完整流程
@@ -94,7 +94,7 @@ def main():
 
     try:
         # ═════════════════════════════════════════════════════════════════
-        # Step 1: Data Loading & EDA (创新点1)
+        # Step 1: Data Loading & EDA 
         # ═════════════════════════════════════════════════════════════════
         logger.info("\n" + "=" * 60)
         logger.info("STEP 1: Data Loading & EDA")
@@ -104,7 +104,7 @@ def main():
         eda.run_eda(df, skip_profiling=args.skip_profiling)
 
         # ═════════════════════════════════════════════════════════════════
-        # Step 2: Data Preprocessing (创新点2)
+        # Step 2: Data Preprocessing 
         # ═════════════════════════════════════════════════════════════════
         logger.info("\n" + "=" * 60)
         logger.info("STEP 2: Data Preprocessing")
@@ -117,7 +117,7 @@ def main():
         )
 
         # ═════════════════════════════════════════════════════════════════
-        # Step 3: Feature Engineering (创新点3+4)
+        # Step 3: Feature Engineering 
         # ═════════════════════════════════════════════════════════════════
         logger.info("\n" + "=" * 60)
         logger.info("STEP 3: Feature Engineering")
@@ -129,7 +129,7 @@ def main():
         )
 
         # ═════════════════════════════════════════════════════════════════
-        # Step 4: Model Training (创新点5)
+        # Step 4: Model Training 
         # ═════════════════════════════════════════════════════════════════
         logger.info("\n" + "=" * 60)
         logger.info("STEP 4: Model Training")
@@ -146,7 +146,7 @@ def main():
             sys.exit(1)
 
         # ═════════════════════════════════════════════════════════════════
-        # Step 5: Model Evaluation (创新点6)
+        # Step 5: Model Evaluation 
         # ═════════════════════════════════════════════════════════════════
         logger.info("\n" + "=" * 60)
         logger.info("STEP 5: Model Evaluation")
@@ -157,7 +157,7 @@ def main():
         )
 
         # ═════════════════════════════════════════════════════════════════
-        # Step 6: Visualization (创新点7)
+        # Step 6: Visualization 
         # ═════════════════════════════════════════════════════════════════
         logger.info("\n" + "=" * 60)
         logger.info("STEP 6: Visualization")
