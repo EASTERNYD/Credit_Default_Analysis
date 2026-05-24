@@ -1,5 +1,5 @@
 """
-数据预处理模块 (创新点2)
+数据预处理模块
 - 多种缺失值补齐方法 (KNN, Iterative, RF, 中位数/众数)
 - 异常值检测与处理 (IQR, Z-score, LOF)
 - 数据标准化 (StandardScaler, MinMaxScaler)
@@ -253,6 +253,7 @@ def handle_outliers(df, outlier_mask, handling=None, target_col=None):
         return df[~outlier_mask].copy()
 
     elif handling == "clip":
+        # Clamp to [Q1 - 1.5*IQR, Q3 + 1.5*IQR] regardless of detection method
         df_result = df.copy()
         numeric_cols = _get_numeric_cols(df_result, target_col)
         for col in numeric_cols:
