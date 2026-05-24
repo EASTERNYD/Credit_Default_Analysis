@@ -1,0 +1,6 @@
+RevolvingUtilizationOfUnsecuredLines
+MonthlyIncome
+DebtRatio
+age
+NumberOfOpenCreditLinesAndLoans
+NumberOfDependents
