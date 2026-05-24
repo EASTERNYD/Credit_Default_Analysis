@@ -1,5 +1,5 @@
 """
-模型验证与评估模块 (创新点6)
+模型验证与评估模块
 - 混淆矩阵、Accuracy、Precision、Recall、F1-score
 - ROC 曲线及 AUC
 - PR 曲线 (适用于类别不平衡)
